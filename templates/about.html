@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Phishing URL Detector</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.3/dist/darkly/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="{{ url_for('index') }}">
+                <i class="fas fa-shield-alt me-2"></i>
+                Phishing Detector
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('index') }}">
+                            <i class="fas fa-home me-1"></i>Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('history') }}">
+                            <i class="fas fa-history me-1"></i>History
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="{{ url_for('about') }}">
+                            <i class="fas fa-info-circle me-1"></i>About
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container mt-4">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <div class="card shadow">
+                    <div class="card-header bg-primary text-white">
+                        <h4 class="card-title mb-0">
+                            <i class="fas fa-info-circle me-2"></i>
+                            About Phishing URL Detector
+                        </h4>
+                    </div>
+                    <div class="card-body">
+                        <h5>What is Phishing?</h5>
+                        <p>Phishing is a cybercrime where attackers impersonate legitimate organizations to steal sensitive information like passwords, credit card details, or personal data. They often use deceptive URLs that look similar to trusted websites.</p>
+                        
+                        <h5>How Our Detection Works</h5>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <div class="analysis-feature">
+                                    <h6><i class="fas fa-brain me-2"></i>Heuristic Analysis</h6>
+                                    <p class="mb-0">Analyzes URL structure, suspicious keywords, and domain characteristics to identify potential threats.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <div class="analysis-feature">
+                                    <h6><i class="fas fa-robot me-2"></i>Machine Learning</h6>
+                                    <p class="mb-0">Uses trained models to classify URLs based on patterns learned from known phishing and legitimate sites.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <div class="analysis-feature">
+                                    <h6><i class="fas fa-trademark me-2"></i>Brand Impersonation</h6>
+                                    <p class="mb-0">Detects attempts to impersonate major brands like Apple, Google, Facebook, and financial institutions.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <div class="analysis-feature">
+                                    <h6><i class="fas fa-search me-2"></i>Pattern Recognition</h6>
+                                    <p class="mb-0">Identifies suspicious URL patterns, unusual domains, and other indicators of malicious intent.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <h5>Features</h5>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-check text-success me-2"></i>Real-time URL analysis</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Confidence scoring</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Detailed threat analysis</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Brand impersonation detection</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Analysis history tracking</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Security recommendations</li>
+                        </ul>
+                        
+                        <div class="alert alert-warning">
+                            <i class="fas fa-exclamation-triangle me-2"></i>
+                            <strong>Disclaimer:</strong> This tool provides analysis based on heuristics and machine learning. It should be used as a supplementary security measure. Always exercise caution when visiting unfamiliar websites and verify the legitimacy of suspicious URLs through multiple sources.
+                        </div>
+                        
+                        <h5>Stay Safe Online</h5>
+                        <ul>
+                            <li>Always verify URLs before clicking, especially in emails or messages</li>
+                            <li>Look for HTTPS encryption and valid SSL certificates</li>
+                            <li>Be suspicious of URLs with unusual domains or excessive special characters</li>
+                            <li>Never enter personal information on suspicious websites</li>
+                            <li>Use two-factor authentication when available</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-dark text-light py-4 mt-5">
+        <div class="container text-center">
+            <p class="mb-0">
+                <i class="fas fa-shield-alt me-2"></i>
+                Phishing URL Detector - Protecting users from malicious URLs
+            </p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
